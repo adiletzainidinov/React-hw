@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script
+      src="https://unpkg.com/react@18/umd/react.development.js"
+      crossorigin
+    ></script>
+    <script
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+      crossorigin
+    ></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <script type="text/babel">
+      const Card = () => React.createElement('h1', null, 'Card');
+
+      const LineWithDiv = () => (
+        <div
+          style={{
+            width: '200px',
+            height: '1px',
+            backgroundColor: 'black',
+          }}
+        ></div>
+      );
+      const Lorem = () => (
+        <p style={{ width: '200px' }}>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur
+          quisquam quae impedit quos iure fugit vitae perferendis fuga, officia
+          voluptates sit voluptas, aut cum. Blanditiis voluptates commodi
+          officiis facilis. Error?
+        </p>
+      );
+      const Button = () => (
+        <button
+          style={{
+            width: '120px',
+            padding: '10px',
+            backgroundColor: 'red',
+            border: 'none',
+            color: 'white',
+            marginLeft: '20px',
+          }}
+        >
+          Next
+        </button>
+      );
+
+      const Divtypography = () => (
+        <div
+          style={{
+            backgroundColor: '#eaeefc',
+            width: '200px',
+            height: '120px',
+            marginTop: '30px',
+            paddingTop: '1px',
+          }}
+        >
+          <p style={{ color: '#14a6e9', textAlign: 'center' }}>Typography</p>
+          <h2
+            style={{
+              fontSize: '40px',
+              marginTop: '-15px',
+              textAlign: 'center',
+              fontWeight: 'bold',
+            }}
+          >
+            Text Align
+          </h2>
+          <h3
+            style={{
+              color: '#7d8b9e',
+              fontSize: '16px',
+              marginTop: '-25px',
+              textAlign: 'center',
+            }}
+          >
+            Lorem ipsum dolor sit amet.
+          </h3>
+        </div>
+      );
+
+      const ButtonRedBorder = () => (
+        <div
+          style={{
+            backgroundColor: '#2a3e51',
+            width: '200px',
+            height: '80px',
+            marginTop: '20px',
+          }}
+        >
+          <button
+            style={{
+              border: '3px solid red',
+              backgroundColor: '#2a3e51',
+              color: 'red',
+              padding: '10px 56.5px',
+              fontSize: '24px',
+              borderRadius: '10px',
+              textAlign: 'center',
+              marginTop: '15px',
+            }}
+          >
+            Button1
+          </button>
+        </div>
+      );
+
+      const FormInput = () => (
+        <div
+          style={{
+            marginTop: '20px',
+            borderTop: '2px solid black',
+            width: '200px',
+            height: '130px',
+            backgroundColor: '#ffffff',
+            borderLeft: '2px solid #eff0f4',
+            borderRight: '2px solid #eff0f4',
+          }}
+        >
+          <div style={{ marginTop: '10px', textAlign: 'center',display:'flex' }}>
+            <div style={{width:'40%'}}><label for="first" style={{ width: '50px' }}>
+              Enter your name:
+            </label></div>
+           <div> <input
+              style={{ width: '100px', marginLeft: '10px' }}
+              type="text"
+              id="first"
+            /></div>
+          </div>
+          <div style={{ marginTop: '10px', textAlign: 'center',display:'flex' }}>
+            <div style={{width:'40%'}}><label for="second" style={{ width: '50px' }}>
+              Enter your email:
+            </label></div>
+           <div> <input
+              style={{ width: '100px', marginLeft: '10px' }}
+              type="email"
+              id="second"
+            /></div>
+          </div>
+          <button style={{marginTop:'10px'}}>Subscribe!</button>
+        </div>
+      );
+
+      const rootElement = document.getElementById('root');
+
+      const App = () => (
+        <div>
+          <Card />
+          <LineWithDiv />
+          <Lorem />
+          <Button />
+          <Divtypography />
+          <ButtonRedBorder />
+          <FormInput />
+        </div>
+      );
+
+      ReactDOM.render(<App />, rootElement);
+    </script>
+  </body>
+</html>
